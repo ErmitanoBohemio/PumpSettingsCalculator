@@ -4,6 +4,7 @@ Pump Settings Calculator es una aplicación desarrollada 100% en lenguaje Java c
 # Pump Settings Calculator App
 
 ![Diabetes Calculator App](https://i.ibb.co/25dYLv3/Captura-Diabetes-Calculator-App-1.png%22%20alt=%22Captura-Diabetes-Calculator-App-1)
+
 Pump Settings Calculator es una aplicación desarrollada 100% en lenguaje Java cuyo principal objetivo es proveer una manera rápida y segura para calcular los valores óptimos requeridos para iniciar u optimizar un tratamiento con bomba de insulina. La aplicación solicita seis datos de los cuales cuatro son obligatorios como son peso, dosis diaria total de insulina (TDD), glucosa promedio y glucosa objetivo para arrojar el resultado y los otros dos opcionales como lo son el nombre y/o identificación y el patrón glucémico: 
 
  1. Nombre y/o Identificación (Opcional): permite personalizar el resultado con el nombre y/o identificación del paciente.
