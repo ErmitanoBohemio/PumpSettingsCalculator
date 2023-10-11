@@ -1,0 +1,255 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 10/02/2023, 3:30:05 a. m.
+    Author     : OscarFabianHP
+*/
+
+#stateCalculatorLabel {
+    -fx-text-fill:#ff4242;
+    -fx-font-weight:bold;
+    -fx-font-size:14px;
+    -fx-wrap-text:true     
+}
+
+.toggleButtonSClass{
+    -fx-text-fill:#fffff7;
+    -fx-background-color:#7a5c40;
+    -fx-effect: innershadow(gaussian, #371f02, 7, 0, 0, 0 );
+    -fx-font-size:14px;
+}
+
+.toggleButtonSClass:hover{
+    -fx-background-color:#9d681c;
+    -fx-effect: dropshadow(gaussian, #ffffc8, 5, 0, 0, 0 );
+    -fx-font-size:14px;
+}
+
+.toggleButtonSClass:focused{
+    -fx-background-color:#9d681c;
+    -fx-effect: dropshadow(gaussian, #ffffc8, 5, 0, 0, 0 );
+    -fx-font-size:14px;
+}
+
+.toggleButtonHipo:selected{
+    -fx-background-color:#f85c60;
+    -fx-effect: innershadow(gaussian, #f54149, 7, 0, 0, 0 );
+    -fx-font-size:14px;
+    -fx-font-weight: bold;
+}
+
+.toggleButtonHiper:selected{
+    -fx-background-color:#fb9c5a;
+    -fx-effect: innershadow(gaussian, #fc6220, 7, 0, 0, 0 );
+    -fx-font-size:14px;
+    -fx-font-weight: bold;
+}
+
+.toggleButtonHipoeHiper:selected{
+    -fx-background-color:#f47a9d;
+    -fx-effect: innershadow(gaussian, #e8456d, 7, 0, 0, 0 );
+    -fx-font-size:14px;
+    -fx-font-weight: bold;
+}
+
+#calcularButton:hover{
+    -fx-background-color: lightgreen;
+    -fx-text-fill:#361f00;
+    -fx-border-color: forestgreen;
+    -fx-border-width: 2;
+    -fx-background-radius: 2;
+    -fx-border-radius: 2;
+    -fx-border-style: solid outside
+}
+
+#reiniciarButton:hover{
+    -fx-background-color: skyblue;
+    -fx-text-fill:#361f00;
+    -fx-border-color: dodgerblue;
+    -fx-border-width: 2;
+    -fx-background-radius: 2;
+    -fx-border-radius: 2;
+    -fx-border-style: solid outside
+}
+
+#guardarButton:hover{
+    -fx-background-color: darkseagreen;
+    -fx-text-fill:#361f00;
+    -fx-border-color: darkgreen;
+    -fx-border-width: 2;
+    -fx-background-radius: 2;
+    -fx-border-radius: 2;
+    -fx-border-style: solid outside
+}
+
+
+
+#resultadoTextArea:focused{
+    -fx-border-style: solid inside;
+    -fx-background-insets: 0px; /*Los pongo para evitar que el estilo insets por defecto siga apareciendo*/
+    -fx-background-radius: 2;
+    -fx-background-color: white;
+    -fx-border-width: 1px;
+    -fx-border-insets: 0px; /*Los pongo para evitar que el estilo insets por defecto siga apareciendo*/
+    -fx-border-radius: 2;
+    -fx-border-color: #94c5a5; /*#aef055; /*#fe495f;*/
+    -fx-effect:innershadow(gaussian, #d4f1db/*#e0ffc3/*#fe9d97*/, 20, 0, 0, 0);
+    
+}
+
+.labelsClass{
+    -fx-font-weight:bold;
+    -fx-text-fill:#524835/*#361f00;*/
+}
+
+.conversorStyleClass{
+    -fx-color:#de4c45;
+    -fx-font-weight:bold;
+    -fx-font-size:12px;
+    -fx-text-fill:white
+}
+
+.conversorStyleClass>  .title> .arrow-button > .arrow{
+    -fx-border-style:solid outside;
+    -fx-border-color: #dcffb6;
+    -fx-border-width: 5;
+}
+
+.conversorStyleClass:focused> .title> .arrow-button > .arrow{
+    -fx-border-style:solid outside;
+    -fx-background-insets: 0;
+    -fx-border-color: #fdffd9;
+    -fx-border-width: 10;
+    -fx-border-insets: 0;
+    -fx-effect: dropshadow(gaussian, #f6f5da, 5, 0, 0, 0 )
+}
+
+.conversorStyleClass:hover> .title> .arrow-button > .arrow{
+    -fx-border-style:solid outside;
+    -fx-background-insets: 0;
+    -fx-border-color: #ff0841;/*#ffd8d8;*/
+    -fx-border-width: 5;
+    -fx-border-insets: 0;
+    -fx-effect: dropshadow(gaussian, #fef9f6, 10, 0.2, 0, 0 )
+}
+
+.conversorStyleClass > .title:hover {
+    -fx-color: orange;
+    -fx-text-fill: #5e4318
+}
+
+.vboxConversorStyleClass{
+    -fx-background-color:#edad9e;
+}
+
+
+.vboxStyleClass{
+    -fx-background-color: #f7f1e1/*#fbeed3*/
+/*    #ebdfc6*/
+}
+
+/*
+.fieldsFocus:focus:focused{
+    -fx-border-style:solid outside;
+    -fx-border-color: #463a2a; /*#ffff96;
+    -fx-border-radius:2px;
+    -fx-border-width:2px;
+    -fx-background-radius:2px;
+    -fx-effect: dropshadow(gaussian, #5c4b37, 10, 0, 0, 0 );
+}*/
+
+/*
+.fieldsFocus:focus{
+    -fx-border-style:solid outside;
+    -fx-border-color: #564334;#463a2a; #ffff96;
+    -fx-background-color:white;
+    -fx-border-radius:2;
+    -fx-border-width:2;
+     -fx-background-insets: 0, 2;
+    -fx-background-radius: 0, 0;
+    -fx-effect: innershadow(gaussian, aqua, 0, 0, 0, 0 ); #5c4b37 #cfb698 #ffccff
+}*/
+
+.fieldsFocus:focused{
+    -fx-border-style:solid outside;
+    /*-fx-background-color: #fffee1;*/
+    -fx-border-color: #68462b;/*#9e6d4e;*/
+    -fx-border-insets:0px; /*Los pongo para evitar que el estilo insets por defecto siga apareciendo*/
+    -fx-border-radius:2;
+    -fx-border-width:1px;
+    -fx-background-radius: 1;
+    -fx-background-insets: 0px; /*Los pongo para evitar que el estilo insets por defecto siga apareciendo*/
+    -fx-effect: innershadow(gaussian, #cfb699, 10, 0, 0, 0 );
+}
+
+.fieldsError:error{
+     /*-fx-border-style:solid  #e30842;*/
+    -fx-border-color: #e30842;
+    -fx-background-color: pink;
+}
+
+.buttonsClass{
+    -fx-text-fill:#42302e;
+    -fx-background-color:#a69682;  /*#a17457; #5e4318;*/
+    /*-fx-border-color: #361f00;
+    -fx-border-width: 1;
+    -fx-background-radius: 3;
+    -fx-border-radius: 2;*/
+    -fx-effect: innershadow(gaussian, #42302e, 7, 0, 0, 0 );
+    -fx-border-color: #42302e;
+    -fx-border-width: 1;
+    -fx-border-radius: 2;
+    -fx-background-radius: 2;
+    -fx-border-style:solid outside; /*Lo pongo para evitar el salto del los botones en la ventana al enfocar*/
+}
+
+.buttonsClass:focused{
+    -fx-border-color:#463a2a;
+    -fx-effect: dropshadow(gaussian, #5c4b37, 10, 0, 0, 0 );
+    -fx-border-style: solid outside;
+    -fx-border-width: 2;
+    -fx-background-radius: 3;
+    -fx-border-radius: 2
+}
+
+.comboBoxSClass {
+    -fx-background-color:#fa7777;
+    -fx-text-fill:#fffff7
+}
+
+/*<!-- HTML !-->
+<button class="button-16" role="button">Button 16</button>
+
+/* CSS */
+/*
+.button-16 {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  cursor: pointer;
+  font-family: arial,sans-serif;
+  font-size: 14px;
+  height: 36px;
+  line-height: 27px;
+  min-width: 54px;
+  padding: 0 16px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+}
+
+.button-16:hover {
+  border-color: #dadce0;
+  box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+  color: #202124;
+}
+
+.button-16:focus {
+  border-color: #4285f4;
+  outline: none;
+}*/

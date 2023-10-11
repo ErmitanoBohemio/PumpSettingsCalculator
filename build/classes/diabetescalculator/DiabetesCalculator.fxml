@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vBox" alignment="TOP_CENTER" prefHeight="760.0" prefWidth="720.0" styleClass="vboxStyleClass" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diabetescalculator.DiabetesCalculatorController">
+   <children>
+      <Label styleClass="labelsClass" text="Calculadora de Diabetes con Bomba de Insulina" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Separator prefWidth="200.0" />
+      <GridPane hgap="7.0" vgap="12.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="170.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label styleClass="labelsClass" text="Nombre y/o Identificación del Paciente">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="(Opcional) Identifique al paciente para personalizar áun más el resultado" />
+               </tooltip>
+            </Label>
+            <Label styleClass="labelsClass" text="Peso Actual (?) *" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Peso actual en kilogramos" />
+               </tooltip></Label>
+            <Label styleClass="labelsClass" text="Dosis Diaria Total Promedio (DDT) (?) *" GridPane.rowIndex="2">
+               <tooltip>
+                  <Tooltip text="Se obtiene sumando toda la insulina (Basal, Bolos y Correcciones) dada por día dividida por el numero total de días (7, 14 o 30 días) o si es usuario de bomba en la pantalla Resumén de los ultimos 7 a 14 días en el historial." />
+               </tooltip>
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label styleClass="labelsClass" text="Glucosa en Sangre Promedio (?) *" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Use la Caluladora incluida para obtener su glucosa en sangre promedio a partir de su última prueba de Hemoglobina Glicosilada" />
+               </tooltip></Label>
+            <Label styleClass="labelsClass" text="Glucosa Objetivo (?) *" GridPane.rowIndex="4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Valor de glucosa objetivo (establecido por su medico) (Ej: 120)" />
+               </tooltip></Label>
+            <Label styleClass="labelsClass" text="Patrones Glucemicos: (?) (Opcional)" GridPane.rowIndex="5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Seleccione la opción del patrón glucemico que presenta de lo contrario omítalo" />
+               </tooltip>
+            </Label>
+            <Label styleClass="labelsClass" text="Hipoglicemias Frecuentes (?)" GridPane.rowIndex="6">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Presenta hipoglicemias frecuentes BAJO (entre 55 y 65mg/gl) o MUY_BAJO (inf. a 50 mg/dl)" />
+               </tooltip></Label>
+            <Label styleClass="labelsClass" text="Hiperglicemias Frecuentes (?)" GridPane.rowIndex="7">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="A1c superior a 7.5% o glucosa promedio superior a 160 mg/gl con hipoglicemias poco frecuentes" />
+               </tooltip>
+            </Label>
+            <Label styleClass="labelsClass" text="Hipo e Hiper Glicemias Frecuentes (?)" GridPane.rowIndex="8">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Presenta hipoglicemias e hiperglicemias frecuentes que oscilan entre 40 y 400 mg/dl" />
+               </tooltip></Label>
+            <TextField fx:id="nombreTextField" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="fieldsFocus" />
+                  <String fx:value="fieldsError" />
+               </styleClass>
+            </TextField>
+            <TextField fx:id="pesoTextField" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="fieldsFocus" />
+                  <String fx:value="fieldsError" />
+               </styleClass></TextField>
+            <TextField fx:id="ddtTextField" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="fieldsFocus" />
+                  <String fx:value="fieldsError" />
+               </styleClass></TextField>
+            <TextField fx:id="gsPromedioTextField" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="fieldsFocus" />
+                  <String fx:value="fieldsError" />
+               </styleClass></TextField>
+            <TextField fx:id="gsObjectivoTextField" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="fieldsFocus" />
+                  <String fx:value="fieldsError" />
+               </styleClass></TextField>
+            <Label text="kg" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label text="u/día" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label text="mg/dl" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label text="mg/dl" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <ComboBox fx:id="hipoTipoCombox" promptText="Selecccione tipo de hipoglicemias más frecuentes" styleClass="comboBoxSClass" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <ToggleButton fx:id="hipoTButton" mnemonicParsing="false" onAction="#patronToggleButtonSelected" text="No" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="perfilTGroup" />
+               </toggleGroup>
+               <styleClass>
+                  <String fx:value="toggleButtonSClass" />
+                  <String fx:value="toggleButtonHipo" />
+               </styleClass></ToggleButton>
+            <ToggleButton fx:id="hiperTButton" mnemonicParsing="false" onAction="#patronToggleButtonSelected" text="No" toggleGroup="$perfilTGroup" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="toggleButtonSClass" />
+                  <String fx:value="toggleButtonHiper" />
+               </styleClass>
+            </ToggleButton>
+            <ToggleButton fx:id="hipoEHiperTButton" mnemonicParsing="false" onAction="#patronToggleButtonSelected" text="No" toggleGroup="$perfilTGroup" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="toggleButtonSClass" />
+                  <String fx:value="toggleButtonHipoeHiper" />
+               </styleClass></ToggleButton>
+            <Button fx:id="calcularButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#calcularAction" styleClass="buttonsClass" text="Calcular" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="reiniciarButton" mnemonicParsing="false" onAction="#reiniciarCalculator" styleClass="buttonsClass" text="Reiniciar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="9">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+      </GridPane>
+      <Label fx:id="stateCalculatorLabel" focusTraversable="false" textAlignment="CENTER" wrapText="true" />
+      <Separator prefWidth="200.0" />
+      <TitledPane animated="false" expanded="false" styleClass="conversorStyleClass" text="Calculadora de glucosa en sangre promedio a partir de hemoglobina glicosilada (HbA1c) reciente">
+         <content>
+            <VBox maxWidth="1.7976931348623157E308" spacing="8.0" styleClass="vboxConversorStyleClass">
+               <children>
+                  <Label styleClass="labelsClass" text="Hemoglobina Glicosilada A1c (5.0-12.99%):" textFill="#383838" />
+                  <TextField fx:id="a1cTextField" promptText="\% A1c reciente (Ej: 5.8)" styleClass="fieldsFocus" />
+                  <Label styleClass="labelsClass" text="Glucosa promedio estimada o eAG (mg/dl):" textFill="#3e3e3e" />
+                  <TextField fx:id="gsCalculado" editable="false" promptText="mg/dl" styleClass="fieldsFocus" />
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+      <Separator prefWidth="200.0" />
+      <TextArea fx:id="resultadoTextArea" editable="false" focusTraversable="false" maxHeight="1.7976931348623157E308" wrapText="true" VBox.vgrow="ALWAYS">
+         <font>
+            <Font size="13.0" />
+         </font></TextArea>
+      <Button fx:id="guardarButton" disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#exportarResultadoListener" styleClass="buttonsClass" text="Guardar Resultado">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label focusTraversable="false" text="Codificado por Ermitaño Bohemio® " />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
